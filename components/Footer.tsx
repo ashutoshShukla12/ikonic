@@ -112,7 +112,7 @@ export default function Footer() {
                   className="text-sm text-[#6b6b6b]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  123 Main Street, Toronto, ON M5V 3A8
+                  25 Industrial Drive, Elmira, Ontario
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -122,7 +122,7 @@ export default function Footer() {
                   className="text-sm text-[#6b6b6b] hover:text-[#c9a84c] transition-colors"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  (416) 555-0100
+                  +1 (555) 982-3410
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -131,9 +131,8 @@ export default function Footer() {
                   className="text-sm text-[#6b6b6b]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  <p>Mon–Fri: 9am – 8pm</p>
-                  <p>Sat: 9am – 6pm</p>
-                  <p>Sun: 10am – 4pm</p>
+                  <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+                  <p>Sun: 10:00 AM - 4:00 PM</p>
                 </div>
               </li>
             </ul>
