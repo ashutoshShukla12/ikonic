@@ -227,7 +227,7 @@ export default function Services() {
 
               <motion.div variants={variants.fadeUp}>
                 <a
-                  href="#contact"
+                  href="https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/all-offer?menu=true&share=true&pId=2782095"
                   className="inline-flex items-center border border-[#c9a84c] px-8 py-3.5 text-xs font-semibold tracking-[0.2em] text-[#c9a84c] uppercase transition-all duration-300 hover:bg-[#c9a84c] hover:text-black cursor-pointer"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
