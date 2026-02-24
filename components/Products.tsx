@@ -10,6 +10,7 @@ export default function Products() {
   return (
     <section
       className="relative py-32 lg:py-44 bg-[#f5f3ef] overflow-hidden"
+      id="products"
       ref={ref as React.RefObject<HTMLElement>}
     >
       <div

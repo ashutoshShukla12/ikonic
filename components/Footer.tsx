@@ -9,7 +9,7 @@ const footerLinks = {
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Team", href: "#team" },
-    { label: "Gift Cards", href: "#gift-cards" },
+    { label: "Gallery", href: "#gallery" },
   ],
   Services: [
     { label: "Haircuts & Fades", href: "#services" },
@@ -122,7 +122,7 @@ export default function Footer() {
                   className="text-sm text-[#6b6b6b] hover:text-[#c9a84c] transition-colors"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  +1 (555) 982-3410
+                  +1 (226) 808 2506
                 </a>
               </li>
               <li className="flex items-start gap-3">
