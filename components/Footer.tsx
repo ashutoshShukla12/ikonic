@@ -144,13 +144,13 @@ export default function Footer() {
       <div className="border-t border-[#2a2a2a]">
         <div className="mx-auto max-w-7xl px-6 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p
-            className="text-xs text-[#3a3a3a]"
+            className="text-xs text-white"
             style={{ fontFamily: "var(--font-body)" }}
           >
             © {new Date().getFullYear()} Ikonic BarberShop. All rights reserved.
           </p>
           <p
-            className="text-xs text-[#3a3a3a]"
+            className="text-xs text-white"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Crafted with precision.
@@ -158,13 +158,20 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#2a2a2a] py-12 flex items-center justify-center">
+      <div className="border-t border-[#2a2a2a] py-3 flex flex-col items-center justify-center gap-3 bg-[#f5f3ef]">
         <span
-          className="text-[4rem] font-black tracking-tight text-[#1a1a1a] leading-none sm:text-[7rem] lg:text-[10rem] xl:text-[13rem] select-none"
+          className="text-[0.65rem] text-[#1d1d1d] uppercase tracking-[0.3em] font-semibold"
+          style={{ fontFamily: "var(--font-body)" }}
+        >
+          Designed & Developed By
+        </span>
+        <a
+          href="#"
+          className="text-xl sm:text-2xl font-black tracking-[0.2em] text-[#000000] select-none uppercase"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          IKONIC
-        </span>
+          Outline Studios
+        </a>
       </div>
     </footer>
   );

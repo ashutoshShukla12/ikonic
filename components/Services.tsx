@@ -1,39 +1,100 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
-const services = [
+const serviceCategories = [
   {
-    name: "Fade & Taper",
-    description: "Precision skin, low, mid or high fades",
+    category: "Men's Haircuts",
+    items: [
+      { name: "Regular Haircut", duration: "20 min", price: "CA$35" },
+      { name: "Fade Haircut", duration: "30 min", price: "CA$40" },
+      { name: "Senior Haircut", duration: "20 min", price: "CA$30" },
+      { name: "Buzz Cut", duration: "20 min", price: "CA$25" },
+      { name: "Scissor Cut", duration: "30 min", price: "CA$40" },
+      { name: "Medium Length Haircut", duration: "30 min", price: "CA$40" },
+      { name: "Long Haircut", duration: "45 min", price: "CA$45" },
+    ],
   },
   {
-    name: "Classic Cut",
-    description: "Scissor cut, point cut, or textured finish",
+    category: "Shaves & Beard",
+    items: [
+      { name: "Line Up / Edge Up", duration: "15 min", price: "CA$15" },
+      {
+        name: "Beard Trim & Shape Up (No Shave)",
+        duration: "15 min",
+        price: "CA$20",
+      },
+      {
+        name: "Beard Trim & Hot Towel Shave",
+        duration: "30 min",
+        price: "CA$30",
+      },
+      {
+        name: "Full Head Shave (Hot Towel)",
+        duration: "30 min",
+        price: "CA$35",
+      },
+    ],
   },
   {
-    name: "Beard Sculpt",
-    description: "Shape, line up, hot towel & straight razor",
+    category: "Combos & Packages",
+    items: [
+      { name: "Haircut & Beard Trim", duration: "45 min", price: "CA$50" },
+      { name: "Fade Haircut & Beard Trim", duration: "50 min", price: "CA$55" },
+      {
+        name: "The Ikonic Package",
+        description: "Haircut, Beard, Wash & Style",
+        duration: "60 min",
+        price: "CA$65",
+      },
+    ],
   },
   {
-    name: "Colour & Toning",
-    description: "Full colour, highlights, gloss, and toning",
+    category: "Kids' Haircuts",
+    items: [
+      { name: "Kids' Regular Haircut", duration: "20 min", price: "CA$25" },
+      { name: "Kids' Fade Haircut", duration: "30 min", price: "CA$30" },
+    ],
   },
   {
-    name: "Blowout & Styling",
-    description: "Blow-dry with premium finishing products",
+    category: "Women's Haircut & Styling",
+    items: [
+      { name: "Blow Dry & Style", duration: "30 min", price: "CA$35" },
+      { name: "Women's Trim / Cut", duration: "30 min", price: "CA$40" },
+      { name: "Women's Wash, Cut & Style", duration: "60 min", price: "CA$60" },
+    ],
   },
-  { name: "Kids Cut", description: "Relaxed cuts for children under 12" },
+  {
+    category: "Waxing & Beauty",
+    items: [
+      { name: "Nose/Ear Waxing", duration: "10 min", price: "CA$10" },
+      { name: "Eyebrow Waxing", duration: "10 min", price: "CA$12" },
+      { name: "Full Face Waxing", duration: "30 min", price: "CA$35" },
+    ],
+  },
+  {
+    category: "Add-ons & Treatments",
+    items: [
+      { name: "Hair Wash", duration: "10 min", price: "CA$10" },
+      { name: "Black Mask Treatment", duration: "15 min", price: "CA$15" },
+    ],
+  },
 ];
 
 export default function Services() {
   const { ref, isInView, variants } = useScrollReveal(0.1);
+  const [openCategory, setOpenCategory] = useState<string | null>(null);
+
+  const toggleCategory = (category: string) => {
+    setOpenCategory(openCategory === category ? null : category);
+  };
 
   return (
     <section
       id="services"
-      className="py-24 lg:py-36 bg-[#0a0a0a]"
+      className="py-24 lg:py-36 bg-[#f5f3efef]"
       ref={ref as React.RefObject<HTMLElement>}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -45,7 +106,7 @@ export default function Services() {
             className="relative"
           >
             <div className="grid grid-cols-2 gap-2">
-              <div className="col-span-2 aspect-video overflow-hidden">
+              <div className="col-span-2 aspect-4/3 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80"
                   alt="Barber crafting a precision fade"
@@ -85,7 +146,7 @@ export default function Services() {
               </motion.span>
               <motion.h2
                 variants={variants.fadeUp}
-                className="text-4xl font-bold leading-tight text-white sm:text-5xl"
+                className="text-4xl font-bold leading-tight text-black sm:text-5xl"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 Our Cutting Edge Services
@@ -95,29 +156,71 @@ export default function Services() {
                 variants={variants.staggerContainer}
                 className="mt-2 space-y-0"
               >
-                {services.map((service) => (
+                {serviceCategories.map((category) => (
                   <motion.li
-                    key={service.name}
+                    key={category.category}
                     variants={variants.fadeUp}
-                    className="group flex items-center justify-between border-b border-[#2a2a2a] py-5 cursor-pointer transition-all duration-200 hover:border-[#c9a84c]/40"
+                    className="group flex flex-col border-b border-[#2a2a2a] py-5 transition-all duration-200 hover:border-[#c9a84c]/40"
                   >
-                    <div>
+                    <div
+                      className="flex items-center justify-between cursor-pointer"
+                      onClick={() => toggleCategory(category.category)}
+                    >
                       <p
-                        className="text-base font-semibold text-white group-hover:text-[#c9a84c] transition-colors"
+                        className="text-base font-semibold text-black group-hover:text-[#c9a84c] transition-colors"
                         style={{ fontFamily: "var(--font-display)" }}
                       >
-                        {service.name}
+                        {category.category}
                       </p>
-                      <p
-                        className="mt-1 text-xs text-[#6b6b6b]"
-                        style={{ fontFamily: "var(--font-body)" }}
+                      <span
+                        className={`text-[#c9a84c] text-lg font-light transition-transform duration-300 ${
+                          openCategory === category.category
+                            ? "rotate-90"
+                            : "opacity-0 group-hover:opacity-100"
+                        }`}
                       >
-                        {service.description}
-                      </p>
+                        →
+                      </span>
                     </div>
-                    <span className="text-[#c9a84c] text-lg font-light opacity-0 group-hover:opacity-100 transition-opacity">
-                      →
-                    </span>
+
+                    <AnimatePresence>
+                      {openCategory === category.category && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <ul className="mt-4 space-y-3 pt-4 border-t border-[#e5e5e5]">
+                            {category.items.map((item) => (
+                              <li
+                                key={item.name}
+                                className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4 py-1"
+                              >
+                                <div>
+                                  <p className="text-sm font-medium text-black">
+                                    {item.name}
+                                  </p>
+                                  {item.description && (
+                                    <p className="text-xs text-[#6b6b6b] mt-0.5">
+                                      {item.description}
+                                    </p>
+                                  )}
+                                </div>
+                                <div className="flex items-center gap-3 shrink-0">
+                                  <span className="text-xs text-[#a0a0a0]">
+                                    {item.duration}
+                                  </span>
+                                  <span className="text-sm font-bold text-[#c9a84c]">
+                                    {item.price}
+                                  </span>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </motion.li>
                 ))}
               </motion.ul>
