@@ -10,7 +10,7 @@ export default function GiftCards() {
   return (
     <section
       id="gift-cards"
-      className="py-24 lg:py-36 bg-(--color-bg)"
+      className="py-24 lg:py-36 bg-[#f5f3ef]"
       ref={ref as React.RefObject<HTMLElement>}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -33,7 +33,7 @@ export default function GiftCards() {
             </motion.span>
             <motion.h2
               variants={variants.fadeUp}
-              className="text-4xl font-bold text-(--color-primary) sm:text-5xl"
+              className="text-4xl font-bold text-[#0a0a0a] sm:text-5xl"
               style={{ fontFamily: "var(--font-display)" }}
             >
               Gift Cards
@@ -54,7 +54,7 @@ export default function GiftCards() {
             >
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center border border-(--color-primary) bg-(--color-primary) px-8 py-4 text-xs font-semibold tracking-[0.2em] text-(--color-inverse) uppercase transition-all duration-300 hover:bg-(--color-accent) hover:border-(--color-accent) hover:text-(--color-primary) cursor-pointer"
+                className="inline-flex items-center justify-center border border-[#0a0a0a] bg-[#0a0a0a] px-8 py-4 text-xs font-semibold tracking-[0.2em] text-white uppercase transition-all duration-300 hover:bg-[#c9a84c] hover:border-[#c9a84c] hover:text-black cursor-pointer"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 Purchase a Gift Card

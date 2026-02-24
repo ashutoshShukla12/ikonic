@@ -37,7 +37,7 @@ export default function Instagram() {
   return (
     <section
       ref={ref as React.RefObject<HTMLElement>}
-      className="py-20 bg-(--color-surface-dark)"
+      className="py-20 bg-[#0a0a0a]"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <motion.div
@@ -52,7 +52,7 @@ export default function Instagram() {
           >
             <InstagramIcon className="h-5 w-5 text-[#c9a84c]" />
             <span
-              className="text-xs font-medium tracking-[0.3em] text-(--color-accent) uppercase"
+              className="text-xs font-medium tracking-[0.3em] text-[#c9a84c] uppercase"
               style={{ fontFamily: "var(--font-body)" }}
             >
               @ikonicbarbershop
@@ -60,14 +60,14 @@ export default function Instagram() {
           </motion.div>
           <motion.h2
             variants={variants.fadeUp}
-            className="text-3xl font-bold text-(--color-inverse) sm:text-4xl"
+            className="text-3xl font-bold text-white sm:text-4xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Follow Our Work
           </motion.h2>
           <motion.p
             variants={variants.fadeUp}
-            className="text-sm text-(--color-muted)"
+            className="text-sm text-[#6b6b6b]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Real cuts. Real clients. Real results.

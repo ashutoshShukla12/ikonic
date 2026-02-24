@@ -26,14 +26,14 @@ export default function Testimonial() {
 
   return (
     <section
-      className="relative py-24 lg:py-36 bg-(--color-bg) overflow-hidden"
+      className="relative py-24 lg:py-36 bg-[#0a0a0a] overflow-hidden"
       ref={ref as React.RefObject<HTMLElement>}
     >
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
-            "repeating-linear-gradient(0deg, transparent, transparent 50px, var(--color-border) 50px, var(--color-border) 51px), repeating-linear-gradient(90deg, transparent, transparent 50px, var(--color-border) 50px, var(--color-border) 51px)",
+            "repeating-linear-gradient(0deg, transparent, transparent 50px, #fff 50px, #fff 51px), repeating-linear-gradient(90deg, transparent, transparent 50px, #fff 50px, #fff 51px)",
         }}
       />
 
@@ -46,14 +46,14 @@ export default function Testimonial() {
         >
           <motion.span
             variants={variants.fadeUp}
-            className="text-xs font-medium tracking-[0.3em] text-(--color-accent) uppercase"
+            className="text-xs font-medium tracking-[0.3em] text-[#c9a84c] uppercase"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Client Love
           </motion.span>
           <motion.h2
             variants={variants.fadeUp}
-            className="text-4xl font-bold text-(--color-primary) sm:text-5xl"
+            className="text-4xl font-bold text-white sm:text-5xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             What Our Clients Say
@@ -70,33 +70,33 @@ export default function Testimonial() {
             <motion.div
               key={review.author}
               variants={variants.fadeUp}
-              className="flex flex-col gap-6 border border-(--color-border) p-8 hover:border-(--color-accent)/30 transition-colors duration-300"
+              className="flex flex-col gap-6 border border-[#2a2a2a] p-8 hover:border-[#c9a84c]/30 transition-colors duration-300"
             >
               <div className="flex gap-1">
                 {Array.from({ length: review.rating }).map((_, i) => (
                   <Star
                     key={i}
-                    className="h-4 w-4 fill-(--color-accent) text-(--color-accent)"
+                    className="h-4 w-4 fill-[#c9a84c] text-[#c9a84c]"
                   />
                 ))}
               </div>
 
               <blockquote
-                className="text-base font-light leading-relaxed text-(--color-primary)/80 italic"
+                className="text-base font-light leading-relaxed text-white/80 italic"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 &ldquo;{review.quote}&rdquo;
               </blockquote>
 
-              <footer className="mt-auto pt-4 border-t border-(--color-border)">
+              <footer className="mt-auto pt-4 border-t border-[#2a2a2a]">
                 <p
-                  className="text-sm font-semibold text-(--color-primary)"
+                  className="text-sm font-semibold text-white"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {review.author}
                 </p>
                 <p
-                  className="text-xs text-(--color-muted) mt-0.5"
+                  className="text-xs text-[#6b6b6b] mt-0.5"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {review.location}

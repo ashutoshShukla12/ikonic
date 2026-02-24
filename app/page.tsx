@@ -7,7 +7,6 @@ import Team from "@/components/Team";
 import Products from "@/components/Products";
 import Testimonial from "@/components/Testimonial";
 import Gallery from "@/components/Gallery";
-import GiftCards from "@/components/GiftCards";
 import Instagram from "@/components/Instagram";
 import Footer from "@/components/Footer";
 
@@ -24,7 +23,6 @@ export default function Home() {
         <Products />
         <Testimonial />
         <Gallery />
-        <GiftCards />
         <Instagram />
       </main>
       <Footer />

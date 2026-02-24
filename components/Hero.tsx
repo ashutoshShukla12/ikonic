@@ -60,7 +60,7 @@ export default function Hero() {
         >
           <a
             href="#services"
-            className="group inline-flex items-center gap-2 border border-(--color-accent) bg-(--color-accent) px-8 py-3.5 text-xs font-semibold tracking-[0.2em] text-(--color-primary) uppercase transition-all duration-300 hover:bg-transparent hover:text-(--color-accent)"
+            className="group inline-flex items-center gap-2 border border-[#c9a84c] bg-[#c9a84c] px-8 py-3.5 text-xs font-semibold tracking-[0.2em] text-black uppercase transition-all duration-300 hover:bg-transparent hover:text-[#c9a84c]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Our Services

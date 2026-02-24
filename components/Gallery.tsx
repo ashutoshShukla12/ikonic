@@ -54,7 +54,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="py-24 lg:py-36 bg-(--color-surface-dark)"
+      className="py-24 lg:py-36 bg-[#0a0a0a]"
       ref={ref as React.RefObject<HTMLElement>}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -73,7 +73,7 @@ export default function Gallery() {
           </motion.span>
           <motion.h2
             variants={variants.fadeUp}
-            className="text-4xl font-bold text-(--color-inverse) sm:text-5xl lg:text-6xl"
+            className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             The Craft Behind

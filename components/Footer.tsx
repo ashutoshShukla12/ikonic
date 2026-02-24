@@ -26,7 +26,7 @@ export default function Footer() {
     <footer
       id="contact"
       ref={ref as React.RefObject<HTMLElement>}
-      className="bg-(--color-surface-dark) border-t border-white/10"
+      className="bg-[#0d0d0d] border-t border-[#2a2a2a]"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12 py-20">
         <motion.div
@@ -42,7 +42,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Scissors className="h-5 w-5 text-[#c9a84c]" strokeWidth={1.5} />
               <span
-                className="text-lg font-black tracking-[0.25em] text-(--color-inverse) uppercase"
+                className="text-lg font-black tracking-[0.25em] text-white uppercase"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 IKONIC
@@ -59,7 +59,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center border border-white/10 text-(--color-muted) transition-all duration-200 hover:border-(--color-accent) hover:text-(--color-accent)"
+                className="flex h-9 w-9 items-center justify-center border border-[#2a2a2a] text-[#6b6b6b] transition-all duration-200 hover:border-[#c9a84c] hover:text-[#c9a84c]"
                 aria-label="Instagram"
               >
                 <Instagram className="h-4 w-4" />
@@ -74,7 +74,7 @@ export default function Footer() {
               className="flex flex-col gap-4"
             >
               <h3
-                className="text-xs font-semibold tracking-[0.25em] text-(--color-inverse) uppercase"
+                className="text-xs font-semibold tracking-[0.25em] text-white uppercase"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {heading}
@@ -84,7 +84,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sm text-(--color-muted) hover:text-(--color-accent) transition-colors duration-200"
+                      className="text-sm text-[#6b6b6b] hover:text-[#c9a84c] transition-colors duration-200"
                       style={{ fontFamily: "var(--font-body)" }}
                     >
                       {link.label}
@@ -100,7 +100,7 @@ export default function Footer() {
             className="flex flex-col gap-4"
           >
             <h3
-              className="text-xs font-semibold tracking-[0.25em] text-(--color-inverse) uppercase"
+              className="text-xs font-semibold tracking-[0.25em] text-white uppercase"
               style={{ fontFamily: "var(--font-body)" }}
             >
               Visit Us
@@ -109,30 +109,31 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-[#c9a84c] mt-0.5 shrink-0" />
                 <span
-                  className="text-sm text-(--color-muted)"
+                  className="text-sm text-[#6b6b6b]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  25 Industrial Drive, Elmira, Ontario
+                  123 Main Street, Toronto, ON M5V 3A8
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-[#c9a84c] shrink-0" />
                 <a
                   href="tel:+14165550100"
-                  className="text-sm text-(--color-muted) hover:text-(--color-accent) transition-colors"
+                  className="text-sm text-[#6b6b6b] hover:text-[#c9a84c] transition-colors"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  +1 (555) 982-3410
+                  (416) 555-0100
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="h-4 w-4 text-[#c9a84c] shrink-0 mt-0.5" />
                 <div
-                  className="text-sm text-(--color-muted)"
+                  className="text-sm text-[#6b6b6b]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
-                  <p>Sun: 10:00 AM - 4:00 PM</p>
+                  <p>Mon–Fri: 9am – 8pm</p>
+                  <p>Sat: 9am – 6pm</p>
+                  <p>Sun: 10am – 4pm</p>
                 </div>
               </li>
             </ul>
@@ -140,7 +141,7 @@ export default function Footer() {
         </motion.div>
       </div>
 
-      <div className="border-t border-white/10">
+      <div className="border-t border-[#2a2a2a]">
         <div className="mx-auto max-w-7xl px-6 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p
             className="text-xs text-[#3a3a3a]"
@@ -157,9 +158,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-12 flex items-center justify-center">
+      <div className="border-t border-[#2a2a2a] py-12 flex items-center justify-center">
         <span
-          className="text-[4rem] font-black tracking-tight text-[#222222] leading-none sm:text-[7rem] lg:text-[10rem] xl:text-[13rem] select-none"
+          className="text-[4rem] font-black tracking-tight text-[#1a1a1a] leading-none sm:text-[7rem] lg:text-[10rem] xl:text-[13rem] select-none"
           style={{ fontFamily: "var(--font-display)" }}
         >
           IKONIC

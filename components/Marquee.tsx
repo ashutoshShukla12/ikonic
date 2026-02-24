@@ -19,7 +19,7 @@ const ticker = [...items, ...items, ...items];
 
 export default function Marquee() {
   return (
-    <section className="overflow-hidden bg-(--color-accent) py-4">
+    <section className="overflow-hidden bg-[#c9a84c] py-4">
       <motion.div
         className="flex whitespace-nowrap"
         style={{ width: "max-content" }}

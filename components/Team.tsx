@@ -32,7 +32,7 @@ export default function Team() {
   return (
     <section
       id="team"
-      className="py-24 lg:py-36 bg-(--color-surface-dark)"
+      className="py-24 lg:py-36 bg-[#0d0d0d]"
       ref={ref as React.RefObject<HTMLElement>}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -44,21 +44,21 @@ export default function Team() {
         >
           <motion.span
             variants={variants.fadeUp}
-            className="text-xs font-medium tracking-[0.3em] text-(--color-accent) uppercase"
+            className="text-xs font-medium tracking-[0.3em] text-[#c9a84c] uppercase"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Our People
           </motion.span>
           <motion.h2
             variants={variants.fadeUp}
-            className="text-4xl font-bold text-(--color-inverse) sm:text-5xl lg:text-6xl"
+            className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Meet the Team
           </motion.h2>
           <motion.p
             variants={variants.fadeUp}
-            className="mt-2 max-w-lg text-sm text-(--color-muted) leading-relaxed"
+            className="mt-2 max-w-lg text-sm text-[#6b6b6b] leading-relaxed"
             style={{ fontFamily: "var(--font-body)" }}
           >
             A passionate crew of certified barbers and stylists united by one
@@ -88,13 +88,13 @@ export default function Team() {
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 p-4">
                 <p
-                  className="font-bold text-(--color-inverse) text-sm"
+                  className="font-bold text-white text-sm"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {member.name}
                 </p>
                 <p
-                  className="text-xs text-(--color-muted) tracking-wide uppercase"
+                  className="text-xs text-[#c9a84c] tracking-wide uppercase"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {member.role}
