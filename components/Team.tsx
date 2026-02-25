@@ -26,7 +26,7 @@ const team = [
   {
     name: "Feroza",
     role: "Hair Stylist",
-    img: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=500&q=80",
+    img: "https://res.cloudinary.com/dv7cynuoz/image/upload/v1772041869/businesswoman_cveq6v.png",
     instagram: "https://www.instagram.com/farosalon?igsh=MWZ4Zml5cnprb3BiYg==",
     fresha:
       "https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/booking?pId=2782095&employeeId=5108517&back=%2Fa%2Fikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i&cartId=deef79ce-e140-4df3-9456-3ed1c8ba8f20",
@@ -34,7 +34,7 @@ const team = [
   {
     name: "Nawra",
     role: "Hair Stylist",
-    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&q=80",
+    img: "https://res.cloudinary.com/dv7cynuoz/image/upload/v1772041869/businesswoman_cveq6v.png",
     instagram: "#",
     fresha:
       "https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/booking?pId=2782095&employeeId=5109959&back=%2Fa%2Fikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i&cartId=cde496e3-9e79-469b-8a5a-b8217773bd71",
