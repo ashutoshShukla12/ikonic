@@ -116,20 +116,41 @@ export default function Team() {
                   className="h-full w-full object-cover grayscale transition-all duration-700 lg:group-hover:grayscale-0 lg:group-hover:scale-105"
                 />
               </div>
-              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 translate-y-full lg:group-hover:translate-y-0 transition-transform duration-300 p-4 pointer-events-none">
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 translate-y-[120%] lg:group-hover:translate-y-0 transition-transform duration-300 p-4 flex flex-col">
                 <p
-                  className="font-bold text-white text-sm"
+                  className="font-bold text-white text-lg pointer-events-none"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {member.name}
                 </p>
                 <p
-                  className="text-xs text-[#c9a84c] tracking-wide uppercase"
+                  className="text-xs font-medium text-[#c9a84c] tracking-wider uppercase pointer-events-none mb-4"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {member.role}
                 </p>
+
+                <div className="flex flex-col gap-2 opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  <a
+                    href={member.fresha || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2 rounded bg-[#c9a84c] px-4 py-2 text-xs font-bold text-black transition-colors hover:bg-[#b59540]"
+                  >
+                    <Calendar className="h-3.5 w-3.5" />
+                    Book with Fresha
+                  </a>
+                  <a
+                    href={member.instagram || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex w-full items-center justify-center gap-2 rounded border border-white/20 px-4 py-2 text-xs font-bold text-white transition-colors hover:bg-white/10"
+                  >
+                    <Instagram className="h-3.5 w-3.5" />
+                    Socials Feed
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
