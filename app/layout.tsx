@@ -13,8 +13,46 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IKONIC | Premium Grooming experience",
-  description: "IKONIC | Premium Grooming experience",
+  title: "IKONIC Barbershop | Premium Men's Grooming",
+  description:
+    "Experience premium grooming at IKONIC Barbershop. We offer expert haircuts, beard trims, and top-tier styling services.",
+  keywords: [
+    "barbershop",
+    "haircut",
+    "men's grooming",
+    "fade",
+    "beard trim",
+    "IKONIC barbershop",
+    "hair salon",
+    "elmira hair salon",
+    "elmira barbershop",
+    "waterloo hair salon",
+    "waterloo barbershop",
+    "barbershop elmira",
+    "barbershop waterloo",
+    "hair salon elmira",
+    "hair salon waterloo",
+    "hair salon elmira ontario",
+    "hair salon waterloo ontario",
+    "premium barbershop",
+    "premium hairsalon",
+    "outline studios",
+  ],
+  metadataBase: new URL("https://ikonicbarbershop.ca"),
+  openGraph: {
+    title: "IKONIC Barbershop | Premium Men's Grooming",
+    description:
+      "Experience premium grooming at IKONIC Barbershop. We offer expert haircuts, beard trims, and top-tier styling services.",
+    url: "https://ikonicbarbershop.ca",
+    siteName: "IKONIC Barbershop",
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IKONIC Barbershop | Premium Men's Grooming",
+    description: "Experience premium grooming at IKONIC Barbershop.",
+  },
 };
 
 export default function RootLayout({
