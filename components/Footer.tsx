@@ -118,7 +118,7 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-[#c9a84c] shrink-0" />
                 <a
-                  href="tel:+14165550100"
+                  href="tel:+12268082506"
                   className="text-sm text-[#6b6b6b] hover:text-[#c9a84c] transition-colors"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
