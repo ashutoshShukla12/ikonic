@@ -39,10 +39,10 @@ export default function Gallery() {
   useEffect(() => {
     const timer = setInterval(() => {
       setDirection(1);
-      setGroup((g) => (g + 1) % TOTAL_GROUPS);
+      setGroup((group + 1) % TOTAL_GROUPS);
     }, INTERVAL);
     return () => clearInterval(timer);
-  }, []);
+  }, [group]);
 
   const goTo = (i: number) => {
     setDirection(i > group ? 1 : -1);
@@ -116,12 +116,16 @@ export default function Gallery() {
               key={i}
               onClick={() => goTo(i)}
               aria-label={`Go to group ${i + 1}`}
-              className={`transition-all duration-300 rounded-full ${
-                i === group
-                  ? "w-8 h-[3px] bg-[#c9a84c]"
-                  : "w-[3px] h-[3px] bg-white/30 hover:bg-white/60"
-              }`}
-            />
+              className="p-2 cursor-pointer group"
+            >
+              <div
+                className={`transition-all duration-300 rounded-full ${
+                  i === group
+                    ? "w-8 h-1.5 bg-[#c9a84c]"
+                    : "w-2 h-1.5 bg-white/30 group-hover:bg-white/60"
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
