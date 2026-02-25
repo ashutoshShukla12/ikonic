@@ -56,7 +56,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/ikonic_hairstudio?igsh=b2luenA0cjl5Z2Vj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center border border-[#2a2a2a] text-[#6b6b6b] transition-all duration-200 hover:border-[#c9a84c] hover:text-[#c9a84c]"
