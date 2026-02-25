@@ -73,7 +73,7 @@ function GalleryContent() {
               className="text-[0.65rem] font-bold tracking-[0.35em] text-[#c9a84c] uppercase"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              The Ikonic Detail
+              The Ikonic
             </span>
             <h1
               className="text-4xl font-bold text-white sm:text-5xl"
