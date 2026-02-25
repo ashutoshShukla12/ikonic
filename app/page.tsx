@@ -8,11 +8,13 @@ import Products from "@/components/Products";
 import Gallery from "@/components/Gallery";
 import Instagram from "@/components/Instagram";
 import Footer from "@/components/Footer";
+import PromoBanner from "@/components/PromoBanner";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <PromoBanner />
       <main className="flex flex-col min-h-screen">
         <Hero />
         <Instagram />

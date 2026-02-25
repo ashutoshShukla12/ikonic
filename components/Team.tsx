@@ -10,7 +10,7 @@ const team = [
   {
     name: "Anish",
     role: "Barber",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80",
+    img: "https://res.cloudinary.com/dv7cynuoz/image/upload/v1772040089/anish_headshot_xcxdlh.jpg",
     instagram: "https://www.tiktok.com/@anishgaba2001?_r=1&_t=ZS-949QYTd1jvz",
     fresha:
       "https://www.fresha.com/book-now/ikonic-barbershop-hair-salon-jivpu9q0/services?lid=2877339&eid=5108522&share=true&pId=2782095",

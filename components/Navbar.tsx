@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Scissors } from "lucide-react";
+import Link from "next/link";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Team", href: "#team" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Products", href: "#products" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Team", href: "/#team" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Products", href: "/#products" },
   {
     label: "Instagram",
     href: "https://www.instagram.com/ikonic_hairstudio?igsh=b2luenA0cjl5Z2Vj",
@@ -36,25 +37,25 @@ export default function Navbar() {
         }`}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="flex items-center gap-2 font-display text-xl font-bold tracking-[0.25em] text-white uppercase"
             style={{ fontFamily: "var(--font-display)" }}
           >
             <Scissors className="h-5 w-5 text-[#c9a84c]" strokeWidth={1.5} />
             IKONIC
-          </a>
+          </Link>
 
           <ul className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="text-sm font-medium tracking-[0.12em] text-white/70 uppercase transition-colors duration-200 hover:text-[#c9a84c]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -93,14 +94,14 @@ export default function Navbar() {
             <ul className="flex flex-col gap-0 px-6 pb-6 pt-4">
               {navLinks.map((link) => (
                 <li key={link.href} className="border-b border-[#2a2a2a]">
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
                     className="block py-4 text-sm font-medium tracking-[0.15em] text-white/70 uppercase hover:text-[#c9a84c] transition-colors"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li className="mt-4">

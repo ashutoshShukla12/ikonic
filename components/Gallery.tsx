@@ -4,28 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
-const images = [
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952510/1_m72l6w.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952510/2_gl2iyy.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952511/3_uwgn9x.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952511/4_ujmddz.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952511/5_wzyv0w.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952514/6_ouevkq.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952515/7_sebxlc.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952515/8_nwfpke.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952515/9_zpjdsz.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952518/10_benmlt.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952522/11_jlqimw.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952523/12_ejst2s.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952526/13_m0wntu.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952524/14_vvevxc.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952527/15_b3puyy.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952527/16_slo9ai.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952528/17_kv6ucq.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952531/18_baf01p.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952531/19_xv1gfh.jpg",
-  "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952532/20_lzqiyc.jpg",
-];
+import Link from "next/link";
+import { galleryImages as images } from "@/lib/gallery-images";
 
 const PER_PAGE = 2;
 const TOTAL_GROUPS = Math.ceil(images.length / PER_PAGE);
@@ -93,19 +73,30 @@ export default function Gallery() {
               transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
               className="w-full grid grid-cols-2 gap-2 lg:gap-4 h-[30vh] md:h-[50vh] lg:h-[70vh] overflow-hidden"
             >
-              {slice.map((src, i) => (
-                <div
-                  key={i}
-                  className="flex justify-center items-center overflow-hidden group relative"
-                >
-                  <img
-                    src={src}
-                    alt="Gallery image"
-                    className="h-full w-auto object-contain transition-transform duration-700 lg:group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-              ))}
+              {slice.map((src, i) => {
+                const globalIndex = group * PER_PAGE + i;
+                return (
+                  <Link
+                    key={i}
+                    href={`/gallery?img=${globalIndex}`}
+                    className="flex justify-center items-center overflow-hidden group relative"
+                  >
+                    <img
+                      src={src}
+                      alt={`Gallery image ${globalIndex + 1}`}
+                      className="h-full w-auto object-contain transition-transform duration-700 lg:group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                      <span
+                        className="opacity-0 lg:group-hover:opacity-100 text-white tracking-widest text-xs uppercase font-bold transition-opacity duration-500 delay-100"
+                        style={{ fontFamily: "var(--font-body)" }}
+                      >
+                        View Gallery
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </motion.div>
           </AnimatePresence>
         </div>
