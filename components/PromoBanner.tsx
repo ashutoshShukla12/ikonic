@@ -22,7 +22,7 @@ export default function PromoBanner() {
         transition={{
           repeat: Infinity,
           ease: "linear",
-          duration: 25,
+          duration: 50,
         }}
         // The width must be perfectly doubled for the seamless loop
         style={{ width: "max-content" }}
