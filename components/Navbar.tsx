@@ -10,6 +10,10 @@ const navLinks = [
   { label: "Team", href: "#team" },
   { label: "Gallery", href: "#gallery" },
   { label: "Products", href: "#products" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/ikonic_hairstudio?igsh=b2luenA0cjl5Z2Vj",
+  },
 ];
 
 export default function Navbar() {

@@ -4,33 +4,6 @@ import { motion } from "framer-motion";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 import { Instagram as InstagramIcon } from "lucide-react";
 
-const photos = [
-  {
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80",
-    alt: "Classic fade cut",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80",
-    alt: "Precision scissor cut",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80",
-    alt: "Beard shaping session",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80",
-    alt: "Textured crop top",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80",
-    alt: "Shop interior atmosphere",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80",
-    alt: "Barber tools artfully arranged",
-  },
-];
-
 export default function Instagram() {
   const { ref, isInView, variants } = useScrollReveal(0.05);
 
@@ -55,7 +28,7 @@ export default function Instagram() {
               className="text-xs font-medium tracking-[0.3em] text-[#c9a84c] uppercase"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              @ikonicbarbershop
+              @ikonic_hairstudio
             </span>
           </motion.div>
           <motion.h2
@@ -78,27 +51,29 @@ export default function Instagram() {
           variants={variants.staggerContainer}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-2 gap-1 sm:grid-cols-3 lg:grid-cols-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
         >
-          {photos.map((photo) => (
-            <motion.a
-              key={photo.src}
-              variants={variants.fadeUp}
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative aspect-square overflow-hidden block"
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                className="h-full w-full object-cover grayscale transition-all duration-500 lg:group-hover:grayscale-0 lg:group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/40 opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <InstagramIcon className="h-6 w-6 text-white" />
-              </div>
-            </motion.a>
-          ))}
+          <motion.a
+            variants={variants.fadeUp}
+            href="https://www.instagram.com/ikonic_hairstudio?igsh=b2luenA0cjl5Z2Vj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-none border border-[#c9a84c] px-8 py-4 text-sm font-medium tracking-[0.2em] text-[#c9a84c] uppercase transition-all duration-300 hover:bg-[#c9a84c] hover:text-black"
+            style={{ fontFamily: "var(--font-body)" }}
+          >
+            <InstagramIcon className="h-5 w-5" />
+            Instagram
+          </motion.a>
+          <motion.a
+            variants={variants.fadeUp}
+            href="https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/all-offer?menu=true&share=true&pId=2782095"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-none bg-[#c9a84c] border border-[#c9a84c] px-8 py-4 text-sm font-medium tracking-[0.2em] text-black uppercase transition-all duration-300 hover:bg-transparent hover:text-[#c9a84c]"
+            style={{ fontFamily: "var(--font-body)" }}
+          >
+            Book Now
+          </motion.a>
         </motion.div>
       </div>
     </section>

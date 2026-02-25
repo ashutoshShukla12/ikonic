@@ -15,13 +15,13 @@ export default function Home() {
       <Navbar />
       <main className="flex flex-col min-h-screen">
         <Hero />
+        <Instagram />
         <Marquee />
         <About />
         <Services />
         <Team />
         <Products />
         <Gallery />
-        <Instagram />
       </main>
       <Footer />
     </>
