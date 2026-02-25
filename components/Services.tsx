@@ -149,7 +149,7 @@ export default function Services() {
                 className="text-4xl font-bold leading-tight text-black sm:text-5xl"
                 style={{ fontFamily: "var(--font-display)" }}
               >
-                Our Cutting Edge Services
+                Our Premium Grooming Services
               </motion.h2>
 
               <motion.ul
@@ -176,7 +176,7 @@ export default function Services() {
                         className={`text-[#c9a84c] text-lg font-light transition-transform duration-300 ${
                           openCategory === category.category
                             ? "rotate-90"
-                            : "opacity-0 group-hover:opacity-100"
+                            : "opacity-100 lg:opacity-0 lg:group-hover:opacity-100"
                         }`}
                       >
                         →

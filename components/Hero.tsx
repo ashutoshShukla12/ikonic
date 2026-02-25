@@ -3,15 +3,26 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
-const VIDEO_URL =
+const DESKTOP_VIDEO_URL =
   "https://res.cloudinary.com/dv7cynuoz/video/upload/v1771944264/Untitled_design_1_fv28il.mp4";
+const MOBILE_VIDEO_URL =
+  "https://res.cloudinary.com/dv7cynuoz/video/upload/v1772029633/Untitled_design_1_wk8o1q.mp4";
 
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center justify-center">
       <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src={VIDEO_URL}
+        className="absolute inset-0 h-full w-full object-cover hidden md:block"
+        src={DESKTOP_VIDEO_URL}
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      />
+      <video
+        className="absolute inset-0 h-full w-full object-cover block md:hidden"
+        src={MOBILE_VIDEO_URL}
         autoPlay
         muted
         loop

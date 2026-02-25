@@ -92,9 +92,9 @@ export default function Instagram() {
               <img
                 src={photo.src}
                 alt={photo.alt}
-                className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
+                className="h-full w-full object-cover grayscale transition-all duration-500 lg:group-hover:grayscale-0 lg:group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/40 opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <InstagramIcon className="h-6 w-6 text-white" />
               </div>
             </motion.a>

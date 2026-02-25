@@ -27,7 +27,7 @@ const images = [
   "https://res.cloudinary.com/dv7cynuoz/image/upload/v1771952532/20_lzqiyc.jpg",
 ];
 
-const PER_PAGE = 5;
+const PER_PAGE = 2;
 const TOTAL_GROUPS = Math.ceil(images.length / PER_PAGE);
 const INTERVAL = 4000;
 
@@ -91,32 +91,26 @@ export default function Gallery() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: direction * -60 }}
               transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-              className="grid grid-cols-2 gap-2 lg:grid-cols-[2fr_1fr_1fr] lg:grid-rows-2 h-[480px] lg:h-[540px]"
+              className="w-full grid grid-cols-2 gap-2 lg:gap-4 h-[30vh] md:h-[50vh] lg:h-[70vh] overflow-hidden"
             >
-              <div className="row-span-2 overflow-hidden group relative">
-                <img
-                  src={slice[0]}
-                  alt="Gallery image"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-
-              {slice.slice(1).map((src, i) => (
-                <div key={i} className="overflow-hidden group relative">
+              {slice.map((src, i) => (
+                <div
+                  key={i}
+                  className="flex justify-center items-center overflow-hidden group relative"
+                >
                   <img
                     src={src}
                     alt="Gallery image"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-full w-auto object-contain transition-transform duration-700 lg:group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
               ))}
             </motion.div>
           </AnimatePresence>
         </div>
 
-        <div className="mt-8 flex items-center justify-center gap-3">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
           {Array.from({ length: TOTAL_GROUPS }).map((_, i) => (
             <button
               key={i}

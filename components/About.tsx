@@ -37,21 +37,27 @@ export default function About() {
             </motion.h2>
 
             <motion.div
-              variants={variants.fadeUp}
-              className="space-y-4 text-[#4a4a4a] leading-relaxed"
+              variants={variants.staggerContainer}
+              className="space-y-6 text-[#4a4a4a] leading-relaxed"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              <p>
-                At Ikonic BarberShop, we don't just cut hair—we craft
+              <motion.p
+                variants={variants.fadeUp}
+                className="text-lg md:text-xl font-medium text-black/80 border-l-2 border-[#c9a84c] pl-4 lg:pl-6"
+              >
+                At Ikonic BarberShop, we don&apos;t just cut hair—we craft
                 identities. Our team of skilled barbers and stylists bring
                 precision, passion, and personality to every appointment.
-              </p>
-              <p>
+              </motion.p>
+              <motion.p
+                variants={variants.fadeUp}
+                className="text-base md:text-lg pl-4 lg:pl-6"
+              >
                 From classic fades and modern textured cuts to full colour
                 transformations and beard sculpting, we offer a complete
                 grooming experience rooted in technique and elevated by
                 artistry.
-              </p>
+              </motion.p>
             </motion.div>
 
             <motion.div

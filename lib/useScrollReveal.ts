@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 
 export function useScrollReveal(threshold = 0.15) {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true, amount: threshold });
+  const isInView = useInView(ref, { once: false, amount: threshold });
 
   const fadeUp = {
     hidden: { opacity: 0, y: 48 },

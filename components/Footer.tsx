@@ -131,8 +131,7 @@ export default function Footer() {
                   className="text-sm text-[#6b6b6b]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
-                  <p>Sun: 10:00 AM - 4:00 PM</p>
+                  <p>Mon - Sun: 9:00 AM - 7:00 PM</p>
                 </div>
               </li>
             </ul>
