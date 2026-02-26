@@ -156,20 +156,84 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#2a2a2a] py-3 flex flex-col items-center justify-center gap-3 bg-[#f5f3ef]">
-        <span
-          className="text-[0.65rem] text-[#1d1d1d] uppercase tracking-[0.3em] font-semibold"
-          style={{ fontFamily: "var(--font-body)" }}
-        >
-          Designed & Developed By
-        </span>
-        <a
-          href="#"
-          className="text-xl sm:text-2xl font-black tracking-[0.2em] text-[#000000] select-none uppercase"
-          style={{ fontFamily: "var(--font-display)" }}
-        >
-          Outline Studios
-        </a>
+      <div className="border-t border-[#2a2a2a]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12 py-2 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
+            <span
+              className="text-[0.65rem] text-[#888888] uppercase tracking-[0.3em] font-semibold text-center sm:text-left"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              Designed & Developed By
+            </span>
+            <span
+              className="text-sm sm:text-base font-black tracking-[0.2em] text-white uppercase text-center sm:text-left"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              Outline Studios
+            </span>
+          </div>
+          <a
+            href="#"
+            className="transition-opacity duration-200 hover:opacity-80 shrink-0"
+            aria-label="Outline Studios"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 400 300"
+              className="w-48 sm:w-64 h-auto"
+            >
+              <rect
+                x="120"
+                y="50"
+                width="160"
+                height="100"
+                rx="6"
+                fill="none"
+                stroke="#FFFFFF"
+                strokeWidth="4"
+                strokeDasharray="10 6"
+              />
+              <circle cx="135" cy="65" r="4" fill="#FFFFFF" />
+              <circle cx="150" cy="65" r="4" fill="#FFFFFF" />
+              <circle cx="165" cy="65" r="4" fill="#FFFFFF" />
+              <line
+                x1="120"
+                y1="80"
+                x2="280"
+                y2="80"
+                stroke="#FFFFFF"
+                strokeWidth="4"
+                strokeDasharray="10 6"
+              />
+              <polygon
+                points="260,110 260,150 270,140 278,160 286,156 278,135 290,135"
+                fill="#10B981"
+                stroke="#FFFFFF"
+                strokeWidth="3"
+              />
+              <text
+                x="200"
+                y="210"
+                fontFamily="Arial, sans-serif"
+                fontSize="28"
+                fontWeight="900"
+                fill="#FFFFFF"
+                textAnchor="middle"
+              >
+                Outline Studios
+              </text>
+              <line
+                x1="170"
+                y1="230"
+                x2="230"
+                y2="230"
+                stroke="#10B981"
+                strokeWidth="6"
+                strokeLinecap="round"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
   );
