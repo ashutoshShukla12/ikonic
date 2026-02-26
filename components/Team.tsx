@@ -18,7 +18,7 @@ const team = [
   {
     name: "Mohit",
     role: "Barber",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80",
+    img: "https://res.cloudinary.com/dv7cynuoz/image/upload/v1772124159/mohit_headshot_sl3396.jpg",
     instagram: "https://www.instagram.com/mohit.blends?igsh=bzdlcWs0dzRra2wy",
     fresha:
       "https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/booking?pId=2782095&employeeId=5086563&back=%2Fa%2Fikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i&cartId=d5a64586-d1c6-4428-83ac-cc1037958375",
