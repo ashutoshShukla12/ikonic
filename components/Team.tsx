@@ -103,9 +103,9 @@ export default function Team() {
               className="group relative overflow-hidden"
             >
               <div
-                className="aspect-3/4 overflow-hidden cursor-pointer lg:cursor-default"
+                className="aspect-3/4 overflow-hidden cursor-pointer xl:cursor-default"
                 onClick={() => {
-                  if (window.innerWidth < 1024) {
+                  if (window.innerWidth < 1280) {
                     setSelectedMember(member);
                   }
                 }}
@@ -113,11 +113,11 @@ export default function Team() {
                 <img
                   src={member.img}
                   alt={`${member.name} — ${member.role}`}
-                  className="h-full w-full object-cover grayscale transition-all duration-700 lg:group-hover:grayscale-0 lg:group-hover:scale-105"
+                  className="h-full w-full object-cover grayscale transition-all duration-700 xl:group-hover:grayscale-0 xl:group-hover:scale-105"
                 />
               </div>
-              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 translate-y-[120%] lg:group-hover:translate-y-0 transition-transform duration-300 p-4 flex flex-col">
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent opacity-0 xl:group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 translate-y-[120%] xl:group-hover:translate-y-0 transition-transform duration-300 p-4 flex flex-col">
                 <p
                   className="font-bold text-white text-lg pointer-events-none"
                   style={{ fontFamily: "var(--font-display)" }}
@@ -131,7 +131,7 @@ export default function Team() {
                   {member.role}
                 </p>
 
-                <div className="flex flex-col gap-2 opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                <div className="flex flex-col gap-2 opacity-0 xl:group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   <a
                     href={member.fresha || "#"}
                     target="_blank"
@@ -165,7 +165,7 @@ export default function Team() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 px-4 backdrop-blur-sm lg:hidden"
+                  className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 px-4 backdrop-blur-sm xl:hidden"
                   onClick={() => setSelectedMember(null)}
                 >
                   <motion.div
