@@ -173,7 +173,7 @@ export default function Footer() {
             </span>
           </div>
           <a
-            href="#"
+            href="https://www.outlinestudios.ca/"
             className="transition-opacity duration-200 hover:opacity-80 shrink-0"
             aria-label="Outline Studios"
           >
