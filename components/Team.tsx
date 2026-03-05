@@ -23,22 +23,6 @@ const team = [
     fresha:
       "https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/booking?pId=2782095&employeeId=5086563&back=%2Fa%2Fikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i&cartId=d5a64586-d1c6-4428-83ac-cc1037958375",
   },
-  {
-    name: "Feroza",
-    role: "Hair Stylist",
-    img: "https://res.cloudinary.com/dv7cynuoz/image/upload/v1772041869/businesswoman_cveq6v.png",
-    instagram: "https://www.instagram.com/farosalon?igsh=MWZ4Zml5cnprb3BiYg==",
-    fresha:
-      "https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/booking?pId=2782095&employeeId=5108517&back=%2Fa%2Fikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i&cartId=deef79ce-e140-4df3-9456-3ed1c8ba8f20",
-  },
-  {
-    name: "Nawra",
-    role: "Hair Stylist",
-    img: "https://res.cloudinary.com/dv7cynuoz/image/upload/v1772041869/businesswoman_cveq6v.png",
-    instagram: "#",
-    fresha:
-      "https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/booking?pId=2782095&employeeId=5109959&back=%2Fa%2Fikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i&cartId=cde496e3-9e79-469b-8a5a-b8217773bd71",
-  },
 ];
 
 type TeamMember = (typeof team)[0];
@@ -94,7 +78,7 @@ export default function Team() {
           variants={variants.staggerContainer}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6"
+          className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-2 lg:gap-6"
         >
           {team.map((member) => (
             <motion.div
