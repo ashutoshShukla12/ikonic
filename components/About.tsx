@@ -1,10 +1,20 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export default function About() {
   const { ref, isInView, variants } = useScrollReveal();
+  const [activeImage, setActiveImage] = useState<number | null>(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveImage((prev) => (prev === 1 ? 2 : 1));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -78,27 +88,41 @@ export default function About() {
             variants={variants.slideRight}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="grid grid-cols-2 gap-3 relative"
+            className="flex flex-col mt-12 lg:mt-0 relative"
           >
-            <div className="col-span-2 aspect-[4/3] overflow-hidden">
+            {/* Horizontal Background Image */}
+            <div
+              className={`w-[90%] md:w-[85%] aspect-[4/3] overflow-hidden self-start rounded-sm shadow-md transition-all duration-500 cursor-pointer ${
+                activeImage === 1
+                  ? "z-30 shadow-2xl scale-105"
+                  : "z-10 relative"
+              }`}
+              onClick={() => setActiveImage(activeImage === 1 ? null : 1)}
+              onMouseEnter={() => setActiveImage(1)}
+              onMouseLeave={() => setActiveImage(null)}
+              style={{ transformOrigin: "top left" }}
+            >
               <img
-                src="https://res.cloudinary.com/dv7cynuoz/image/upload/v1771951617/about1_lau35c.jpg"
-                alt="Barber at work — precision haircut"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                src="https://res.cloudinary.com/dv7cynuoz/image/upload/v1772759046/about_us1_r8scwx.jpg"
+                alt="Ikonic BarberShop Shop"
+                className={`h-full w-full object-cover transition-transform duration-700 ${activeImage === 1 ? "scale-100" : "hover:scale-105"}`}
               />
             </div>
-            <div className="aspect-square overflow-hidden">
+
+            {/* Vertical Foreground Image */}
+            <div
+              className={`w-[75%] sm:w-[60%] md:w-[55%] aspect-3/4 overflow-hidden border-8 md:border-12 border-[#f5f3ef] shadow-2xl rounded-sm self-end -mt-[35%] sm:-mt-[25%] md:-mt-32 lg:-mt-40 xl:-mt-48 lg:-mr-8 xl:-mr-12 transition-all duration-500 cursor-pointer ${
+                activeImage === 2 ? "z-30 scale-105" : "z-20 relative"
+              }`}
+              onClick={() => setActiveImage(activeImage === 2 ? null : 2)}
+              onMouseEnter={() => setActiveImage(2)}
+              onMouseLeave={() => setActiveImage(null)}
+              style={{ transformOrigin: "bottom right" }}
+            >
               <img
-                src="https://res.cloudinary.com/dv7cynuoz/image/upload/v1771951483/about2_vgisxc.jpg"
-                alt="Barber with client — grooming session"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-            </div>
-            <div className="aspect-square overflow-hidden">
-              <img
-                src="https://res.cloudinary.com/dv7cynuoz/image/upload/v1771951697/about3_trsvxr.jpg"
-                alt="Barber shop interior"
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                src="https://res.cloudinary.com/dv7cynuoz/image/upload/v1772759038/about_us2_pnqggu.jpg"
+                alt="Ikonic BarberShop Team"
+                className={`h-full w-full object-cover transition-transform duration-700 ${activeImage === 2 ? "scale-100" : "hover:scale-105"}`}
               />
             </div>
           </motion.div>
