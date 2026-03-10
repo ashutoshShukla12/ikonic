@@ -28,7 +28,7 @@ export default function Instagram() {
               className="text-xs font-medium tracking-[0.3em] text-[#c9a84c] uppercase"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              @ikonic_hairstudio
+              @ikonic_barbershop
             </span>
           </motion.div>
           <motion.h2
