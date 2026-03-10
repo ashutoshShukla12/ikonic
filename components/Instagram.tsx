@@ -55,7 +55,7 @@ export default function Instagram() {
         >
           <motion.a
             variants={variants.fadeUp}
-            href="https://www.instagram.com/ikonic_hairstudio?igsh=b2luenA0cjl5Z2Vj"
+            href="https://www.instagram.com/ikonic_barbershop"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-none border border-[#c9a84c] px-8 py-4 text-sm font-medium tracking-[0.2em] text-[#c9a84c] uppercase transition-all duration-300 hover:bg-[#c9a84c] hover:text-black"
