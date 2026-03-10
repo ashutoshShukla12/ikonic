@@ -13,7 +13,7 @@ const navLinks = [
   { label: "Products", href: "/#products" },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/ikonic_hairstudio?igsh=b2luenA0cjl5Z2Vj",
+    href: "https://www.instagram.com/ikonic_barbershop",
   },
 ];
 
