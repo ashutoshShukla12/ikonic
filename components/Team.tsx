@@ -10,7 +10,7 @@ const team = [
   {
     name: "Anish",
     role: "Barber",
-    img: "https://res.cloudinary.com/dv7cynuoz/image/upload/v1772040089/anish_headshot_xcxdlh.jpg",
+    img: "https://yomwxud9o7bg1yoc.public.blob.vercel-storage.com/anish_headshot.jpeg",
     instagram: "https://www.tiktok.com/@anishgaba2001?_r=1&_t=ZS-949QYTd1jvz",
     fresha:
       "https://www.fresha.com/book-now/ikonic-barbershop-hair-salon-jivpu9q0/services?lid=2877339&eid=5108522&share=true&pId=2782095",
@@ -18,7 +18,7 @@ const team = [
   {
     name: "Mohit",
     role: "Barber",
-    img: "https://res.cloudinary.com/dv7cynuoz/image/upload/v1772124159/mohit_headshot_sl3396.jpg",
+    img: "https://yomwxud9o7bg1yoc.public.blob.vercel-storage.com/mohit_headshot.HEIC",
     instagram: "https://www.instagram.com/elmira_barber_mohit/",
     fresha:
       "https://www.fresha.com/a/ikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i/booking?pId=2782095&employeeId=5086563&back=%2Fa%2Fikonic-barbershop-hair-salon-elmira-25-industrial-drive-sp5ef79i&cartId=d5a64586-d1c6-4428-83ac-cc1037958375",

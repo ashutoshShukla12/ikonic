@@ -12,7 +12,7 @@ export default function About() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveImage((prev) => (prev === 1 ? 2 : 1));
-    }, 1000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -103,7 +103,7 @@ export default function About() {
               style={{ transformOrigin: "top left" }}
             >
               <img
-                src="https://res.cloudinary.com/dv7cynuoz/image/upload/v1772759046/about_us1_r8scwx.jpg"
+                src="https://yomwxud9o7bg1yoc.public.blob.vercel-storage.com/about_us1.jpeg"
                 alt="Ikonic BarberShop Shop"
                 className={`h-full w-full object-cover transition-transform duration-700 ${activeImage === 1 ? "scale-100" : "hover:scale-105"}`}
               />
@@ -120,7 +120,7 @@ export default function About() {
               style={{ transformOrigin: "bottom right" }}
             >
               <img
-                src="https://res.cloudinary.com/dv7cynuoz/image/upload/v1772759038/about_us2_pnqggu.jpg"
+                src="https://yomwxud9o7bg1yoc.public.blob.vercel-storage.com/about_us2.jpeg"
                 alt="Ikonic BarberShop Team"
                 className={`h-full w-full object-cover transition-transform duration-700 ${activeImage === 2 ? "scale-100" : "hover:scale-105"}`}
               />

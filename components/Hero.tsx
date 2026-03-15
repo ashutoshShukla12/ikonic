@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const DESKTOP_VIDEO_URL =
-  "https://res.cloudinary.com/dv7cynuoz/video/upload/v1771944264/Untitled_design_1_fv28il.mp4";
+  "https://yomwxud9o7bg1yoc.public.blob.vercel-storage.com/hero-bg.mp4";
 const MOBILE_VIDEO_URL =
-  "https://res.cloudinary.com/dv7cynuoz/video/upload/v1772029633/Untitled_design_1_wk8o1q.mp4";
+  "https://yomwxud9o7bg1yoc.public.blob.vercel-storage.com/hero_mobile.mp4";
 
 export default function Hero() {
   return (
