@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 import { Scissors } from "lucide-react";
+import Link from "next/link";
 
 export default function Products() {
   const { ref, isInView, variants } = useScrollReveal(0.1);
@@ -40,7 +41,7 @@ export default function Products() {
               className="text-xs font-medium tracking-[0.35em] text-[#c9a84c] uppercase"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              Coming Soon
+              Now Available
             </span>
           </motion.div>
 
@@ -60,33 +61,20 @@ export default function Products() {
               className="mx-auto max-w-md text-sm leading-relaxed text-[#6b6b6b]"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              We&rsquo;re curating a selection of the same professional-grade
-              products used daily in our shop. Available in-store and online —
-              launching soon.
+              We&rsquo;ve curated a selection of the same professional-grade
+              products used daily in our shop. Available exclusively in-store
+              when you visit for your appointment.
             </p>
           </motion.div>
 
-          <motion.div variants={variants.fadeUp} className="w-full max-w-sm">
-            <div className="flex border border-[#c9a84c]/40 overflow-hidden bg-white shadow-sm">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-3.5 text-sm text-[#0a0a0a] placeholder-[#b0ada7] outline-none bg-transparent"
-                style={{ fontFamily: "var(--font-body)" }}
-              />
-              <button
-                className="px-5 bg-[#0a0a0a] text-white text-xs font-semibold tracking-[0.15em] uppercase transition-colors duration-300 hover:bg-[#c9a84c] hover:text-black"
-                style={{ fontFamily: "var(--font-body)" }}
-              >
-                Notify Me
-              </button>
-            </div>
-            <p
-              className="mt-3 text-[0.65rem] tracking-[0.15em] text-[#b0ada7] uppercase"
+          <motion.div variants={variants.fadeUp} className="w-full mt-4 flex justify-center">
+            <Link
+              href="/products"
+              className="px-8 py-4 bg-[#0a0a0a] text-white text-xs font-bold tracking-[0.15em] uppercase transition-colors duration-300 hover:bg-[#c9a84c] hover:text-black shadow-sm"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              Be first to know when we launch
-            </p>
+              View Products
+            </Link>
           </motion.div>
 
           <motion.div
