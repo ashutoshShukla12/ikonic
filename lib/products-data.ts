@@ -134,15 +134,6 @@ export const productsData: Product[] = [
       "https://yomwxud9o7bg1yoc.public.blob.vercel-storage.com/product_16.jpeg",
   },
   {
-    id: "product_17",
-    name: "OSIS+ Bouncy Curls Oil-In-Gel",
-    description:
-      "Strong control gel with oil designed to define fine to medium curly hair without leaving it stiff or crunchy.",
-    category: "Volume & Texture",
-    image:
-      "https://yomwxud9o7bg1yoc.public.blob.vercel-storage.com/product_17.jpeg",
-  },
-  {
     id: "product_18",
     name: "OSIS+ Tipsy Twirl Jelly",
     description:
